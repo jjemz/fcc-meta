@@ -16,7 +16,7 @@ app.post('/api/file', upload.single('userFile'), function(req, res, next){
 		size: req.file.size
 	}
 
-	var size = JSON.stringify(sizeObj);
+	var size = sizeObj;
 	res.send(size)
 	console.log('SIZE OF FILE: ' + size )
 })
